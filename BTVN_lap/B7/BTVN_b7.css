@@ -1,0 +1,23 @@
+/* BTVN_b7.css */
+
+#B7{
+    background-image: linear-gradient(to right, rgb(135, 47, 47), rgb(201, 54, 54));
+    width: 30%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+#B7_title{
+    background-color: rgb(95, 40, 40);
+    color: white;
+    width: 70%;
+    padding-bottom: 7px;
+    padding-top: 7px;
+    
+    
+}
+#B7_form{
+    background-color: white;
+    width: 70%;
+
+    /* padding-top: px; */
+}
