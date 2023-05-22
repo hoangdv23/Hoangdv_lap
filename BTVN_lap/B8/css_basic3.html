@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buổi số 8</title>
+</head>
+<body>
+    <style>
+    #w-h{
+        /* 1-width- height */
+       background-color: red;
+    /* width: 100px; */
+    /* height: 100px; */
+    min-width: 100px;
+    max-width: 100px; 
+    }
+    </style>
+
+    <div id="w-h">with height</div>
+    <!-- /* 2- Position: di chuyển phần tử mà không ảnh hưởng xung quanh nó */ -->
+    <!-- fixed: vị trí cố định khi cuộn trang- banner -->
+    <!-- relative: lấy chính nó để căn khi di chuyển -->
+    <!-- absolute: lấy 4 góc trình duyệt để căn -->
+
+    <!-- Muốn phần tử con chỉ di chuyển dựa vào phần tử cha -->
+    
+    
+    <style>  
+    body{
+        height: 1500px;
+    } 
+        #pos1{
+            width: 60px;
+            height: 60px;
+            background: blue;
+        }
+        #pos2{
+            width: 50px;
+            height: 50px;
+            background-color: yellow;
+            /* position: fixed; */
+            /* position: relative;
+            top: -10px; */
+        }
+        /* <!-- Cha là Relative, con là absolute thì con sẽ luôn nằm theo cha --> */
+        #parent{width: 100px;height: 100px;background-color: red;}
+        #child{width: 50px; height: 50px;background-color: green;}
+        /* 3-overflow: xử lý khi bị tràn nội dung */
+        #ov{
+            width: 500px;
+            height: 100px;
+            background-color: yellow;
+            overflow: scroll;
+             opacity: 0.5; /*4: độ đậm mờ */
+        }
+        /* 5: Transition: hiệu ứng chuyển đổi */
+        #tran{
+            transition: all 2s aese;
+        }
+        #tran:hover{
+            background: green;
+        }
+    </style>
+    <h2 id="tran">Hover để đổi màu nền</h2>
+    <div id="ov">
+        aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+    </div> <br>
+    <hr>
+    <div id="parent">
+        <div id="child">Chide of parent</div>
+    </div>
+    <div id="pos1">Div pos1</div>
+    <div id="pos2">Div Pos2</div>
+
+</body>
+</html>

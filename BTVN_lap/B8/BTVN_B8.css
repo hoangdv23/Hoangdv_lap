@@ -1,0 +1,199 @@
+/* BTVN_B8.css */
+/* bài 1 */
+#title{
+    border: 1px solid black;
+    width: 320px;
+}
+
+.row{
+    display: flex;
+    
+}
+.pink{
+    border: 1px solid ;
+    width: 80px;
+    height: 30px;
+    margin: 10px;
+    background-color: #ea9999 ;
+}
+.blue{
+    border: 1px solid;
+    width: 200px;
+    height: 30px;
+    margin: 10px;
+    margin-left: 0px;
+    background-color: #9fc5f8;
+}
+.yellow{
+    border: 1px solid;
+    width: 295px;
+    height: 30px;
+    margin: 10px;
+    background-color: #ffe599 ;
+}
+/* bài 2  */
+.border{
+    border: 3px solid;
+    width: 400px;
+}
+.header{
+    border: 3px solid;
+    height: 30px;
+    margin: 5px;
+    text-align: center;
+}
+.slidebar{
+    border: 3px solid;
+    width: 200px;
+    height: 50px;
+    margin: 5px;
+    text-align: center;
+}
+.content{
+    border: 3px solid;
+    width: 200px;
+    height: 50px;
+    margin: 5px;
+    vertical-align: middle;
+    text-align: center;
+
+}
+.footer{
+    border: 3px solid;
+    margin: 5px;
+    height: 30px;
+    text-align: center;
+    vertical-align: middle;
+}
+/* bài 3 */
+.b3{
+    display: flex;
+    flex-grow: 2;
+    flex-shrink: 2;
+    flex-basis: 10%;
+    height: 120px;
+    padding-top: 10px;
+}
+/* bài 4 */
+.table{
+    border: 2px solid;
+    width: 50%;
+}
+
+.b4_header{
+    border: 1px solid #4472c4;
+    margin: 5px;
+    height: 40px;
+    text-align: center;
+}
+.b4_row{
+    display: flex;
+}
+.b4_menu{
+    border: 1px solid #4472c4;
+    margin: 5px;
+    margin-bottom: 20px;
+    flex: 1;
+    height: 150px;
+    text-align: center;
+}
+.b4_th{
+    flex: 1;
+}
+.b4_Text{
+    border: 1px solid #4472c4;
+    margin: 5px;
+    margin-left: 0px;
+    flex: 1;
+    height: 70px;
+    text-align: center;
+}
+.b4_text{
+    border: 1px solid #4472c4;
+    margin: 5px;
+    margin-left: 0px;
+    margin-bottom: 20px;
+    flex: 1;
+    height: 75px;
+    text-align: center;
+}
+
+/* bài 5 */
+.b5_table{ 
+    width: 50%;
+    margin: auto;
+}
+.b5_title{
+    background-color: #efefef;
+    padding: 5px;
+    text-align: center;
+}
+.b5_row{
+    background-color: #efefef;
+    margin-top: 5px;
+    height: 50px;
+    text-align: center;
+    flex: 1;
+    flex-shrink: 1;
+}
+.b5_content{
+    background-color: #efefef;
+    text-align: center;
+    height: 100px;
+    flex: 1;
+    flex-shrink: 1;
+}
+.b5_content:nth-child(2){
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.feature{
+    background-color: #efefef;
+    margin-top: 20px;
+    height: 100px;
+    text-align: center;
+}
+.b5_footer{
+    background-color: #efefef;
+    text-align: center;
+    height: 50px;
+}
+
+/* bài 6 */
+.b6_table{
+    width: 50%;
+    margin: auto;
+}
+.b6_header{
+    background-color: #666666;
+    padding-top: 10%;
+    text-align: center;
+    margin: auto;
+    height: 100px;
+    color: white;
+    font-size: 50px;
+    font-family: 'Times New Roman';
+}
+.b6_content{
+    display: flex;
+    flex: 1;
+}
+.b6_link{
+    padding-left: 20px;
+    padding-top: 20px;
+    background-color: #cccccc;
+    width: 30%;
+    height: 200px;
+}
+.b6_detail{
+    background-color: #f1f1f1f1;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+.b6_footer{
+    background-color: #777777;
+    text-align: center;
+    color: white;
+    padding-top: 20px;
+    height: 30px;
+}
