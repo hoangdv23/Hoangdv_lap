@@ -1,0 +1,82 @@
+operator.html
+Toán tử trong lập trình
+- Là các kỹ hiệu giúp tính toán các biểuthuwcs
+    3 + 2 = 5
+        => 3,2 là số hạng
+        => + là toán tử
+<script>
+    // 1. Toán tử số học: tính toán các giá trị các số hojc, kết quả trả về sẽ là Number
+    var number1 = 5;
+    var number2 = 2;
+    //phép cộng: +
+    var res1 = number1 + number2; // 7
+    // Phép trừ: - 
+    var res2 = number1 - number2; // 3
+    // Phép nhân: x .
+    var res3 = number1 * number2; // 10
+    // Phép chia: / 
+    var res4 = number1 / number2; // 2.5
+    // Phép chia lấy dư
+    var res5 = number1 % number2; // 1
+    // Tăng giảm tích luỹ: ++ -- tăng giảm 1 đơn vị
+    var number = 5;
+    number++;
+    // nếu ++A thì sẽ thay đổi trước, A++ thì thay đổi sau
+    console.log(number); //6
+    var numb = 3;
+    var result = numb++ - numb--;
+    //         = 3      - 4
+    var x= 5;
+    var test = x++ - 2 + ++x;
+    console.log(test);
+    var x = 2;
+    var sum = x * x - --x * 2 + x++ - x + ++x;
+    //       2 * 2  -   1 * 2 + 1   - 2 +   3;   // 4
+    console.log(sum);
+    //2 - Toán tử so sánh: so sánh các biểu thức và trả về boolean
+    // Lớn hơn  >
+    var test1 = 3 > 2; //true
+    // Lớn hơn hoặc bằng >=
+    var test2 = 2 >= 2; //true
+    //Nhỏ hơn: <
+    // Nhỏ hơn hoặc bằng: =<
+    // so sánh bằng: ==
+    // So sánh == chỉ so sánh về giá trị, so sánh === thì cả giá trị và kiểu dữ liệu
+    var test3 = (1 == 2); //fasle
+    var test4 = (1 == '1'); //true
+    var test5 = (1 === '1'); //false
+    // so sánh khác: !=
+    var test6 = (2 != 1); //true
+    // 3 - Toán tử logic: kết hợp nhiều biểu thức so sánh, kqua trả về boolean
+    // + && : and
+    // true && true = true
+    // true && false = false
+    // false && true = false
+    // false && false = flase
+    var test1 = (3>0) && (3>=3); //true
+    // + || : or
+    // true || true = true
+    // true || false = true
+    // false || true = true
+    // false || false = false
+    // + !: not
+    // !true = false
+    // !false = true
+    var test2 = !(1 > 0); //false
+    // 4- Toán tử gán
+    // = phép gán
+    var x = 5;
+    // Cộng tích luỹ +=
+    x += 3; //=8
+    // Trừ tích luỹ -=
+    x -= 2; // x = x - 2 = 6
+    // nhân tích luỹ *=
+    x *= 3; // x = x * 3 = 18
+    // Chia tích luỹ
+    x /= 2; // x = x / 2 = 9
+    // chia lấy dư tích luỹ %=
+    x %= 3; // x= x % 3 = 0
+    
+
+
+</script>    

@@ -1,0 +1,74 @@
+<!-- layout.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout CSS</title>
+</head>
+<body>
+    <!-- Layout web là gì? -->
+    <!-- Chia trang web thành các thành phần/ bố cục
+        Dựng layout là xây dựng cấu trúc hàng/cột
+        Các kỹ thuật dựng layout:
+        + Table HTML: Khó để responsive trên mobile
+        + CSS Float: Có tể dùng nhưng phải fix bị vỡ giao diện ( lệch hàng cột)
+        + CSS Flex: Dùng vì đơn giản và linh hoạt
+        + CSS Grid: phức tạp hơn flex-->
+        <!-- 1- Thành phần inline và block
+        block: div h p ul ol
+        inline: b u i span a,.... 
+        nên sử dụng inline-block thay inline để linh hoạt margin trên dưới -->
+        <div id="div1">Thẻ div</div> Text Test
+       
+        <b id="b1">Thẻ b</b> Text test thẻ b
+        
+        <style>
+            li{
+                display: inline-block;
+                margin: 0 10px;
+            }
+        </style>
+
+
+        <ul>
+            <li><a href="#">link 1</a></li>
+            <li><a href="#">link 2</a></li>
+            <li><a href="#">link 3</a></li>
+            <li><a href="#">link 4</a></li>
+        </ul>
+        <!-- Hướng dẫn dựng layout với Flexbox 
+            -Xác định cấu trúc chuẩn bị dựng là 1 hàng và bao nhiêu cột
+            -Tạo cấu trúc HTML cha con tương ứng, số cột là số thẻ div tương ứng trong thành phần con
+            -Demo cấu trúc layout 1 hàng 3 cột bằng nhau
+            --->
+
+        <style>
+            .col1{
+                background-color: red;
+            }
+            .col2{
+                background-color: green;
+            }
+            .col3{
+                background-color: blue;
+            }
+            .row{
+                display: flex;
+                /* - set width cho các thành phần con phù hợp */
+            }
+
+            /* Mặc định flex luôn luôn giữ các thành phần con nằm trên 1 hàng không quan tâm về kích thước
+            1 hàng có >100% hay không */
+        </style>
+        <!-- Sử dụng CSS để áp dụng kỹ thuật Flexbox: -->
+        <!-- -CSS thành phần cha: display:flex -->
+        <div class="row">
+            <div class="col1">Div 1</div>
+            <div class="col1">Div 2</div>
+            <div class="col1">Div 3</div>
+        </div>
+
+</body>
+</html>

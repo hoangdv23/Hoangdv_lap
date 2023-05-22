@@ -1,0 +1,24 @@
+Loop.html
+- Vòng lặp:
+
+<script>
+    //log 500 lần chuỗi  Hello 500 anh em
+    console.log('Hello 500ae');
+    //for, while, do...While
+    // Luôn phải tránh vòng lặp vô hạn
+    //1- for: vòng lặp xác định trước số lần
+    // VD: hiển thị số từ 1 đến 10
+    for(var i = 1; i <= 10; i++){
+        document.writeln('Hello world');
+    }
+    // 2- while: vòng lặp không xác định
+    var j = 1;
+    while (j<=10){
+        document.writeln(j);
+        j++;
+    }
+    // 3- do....while: luôn luôn thực thi ít nhất 1 lần cho dù bị sai ngay từ đầu
+    do{
+        document.writeln('test do while');
+    } while (5 < 3);
+</script>
