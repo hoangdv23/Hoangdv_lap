@@ -1,0 +1,72 @@
+/* Nhúng font vào hệ thống
+ */
+ @font-face {
+    font-family: Pacifio;
+    src: url(../fonts/Pacifico.ttf);
+ }
+.header {
+    background: #2f2f2f;
+    padding: 10px;
+}
+.container{
+    width: 70%;
+    margin: auto;
+}
+.row{
+    display: flex;
+}
+.logo{
+    width: 40%;
+    color: white;
+    font-size: 40px;
+    font-family: Pacifio;
+}
+.menu{
+    width: 60%;
+}
+.menu-ul{
+    margin: 0;
+}
+li{
+    display: inline-block;
+    margin: 30px;
+}
+body{
+    /* chưa tạo */
+    font-family: Myriad Pro;
+}
+a{
+    color: #fff;
+    text-decoration: none;
+}
+.main-top{
+    background: #f1f1f1;
+    padding: 40px 0;
+}
+.article{
+    width: 40%;
+}
+.main-img{
+    width: 60%;
+}
+.learn-more{
+    background-color: #f99640;
+    padding: 8px 25px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.main-center{
+    padding: 40px 0;
+}
+.item{
+    width: 33.33%;
+}
+.black-div{
+    background-color: black;
+    height: 100px;
+}
+.item:nth-child(2){
+    margin: 0 30px;
+}

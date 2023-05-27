@@ -1,0 +1,104 @@
+<!-- reponsive.html -->
+
+ <!-- Reponsive là gì ?
+    Là kỹ thuật thiêt kế web hiển thị tương thích với mọi thiết bị
+    - dễ đọc và k xuất hiện thanh cuộn ngang
+    - hiện nay 100% các site đều hướng tới reponsive: SEO web
+    - Sử dụng CSS để respongsive
+    - Thư viện hỗ trợ responsive: Bootstrap
+    - Có 3 thiết bị chính: laptop-pc,  ipad/tablet, mobile
+
+     -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Bắt buộc phải có để responsive chinhs xác -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buổi 10: Reponsive</title>
+</head>
+<body>
+    <style>
+        h1{
+            /* color: red; */
+            /* Xác định miền kích thước cúa 3 thiết bị:
+            PC: min-width: 1024 
+            Ipad: min-width: 768px, max-width: 1023px
+            Mobile: max-width:767px
+            - Quy tắc về vị trí code CSS responsive: PC -> ipad -> mobile -> độ ưu tiên
+            */
+        }
+            /* css cho pc */
+            @media(min-width: 1024px){
+                h1{
+                    color: red;
+                }
+                h3{
+                    background-color: green;
+                }
+            }
+            /* css cho ipad */
+            @media(min-width:768px) and (max-width: 1023px){
+                h1{
+                    color: yealow;
+                }
+                h3{
+                    background-color: red;
+                }
+            }
+            @media(min-width: 767px){
+                h1{
+                    color: green;
+                }
+                h3{
+                    background-color: yellow;
+                }
+            }
+            /* Ví dụ Col */
+            .row{
+                display: flex;
+                
+            }
+            .col1,.col2,.col3,.col4{
+                width: 25%;
+            }
+            .col1{
+                background: red;
+            }
+            .col2{
+                background: green;
+            }
+            .col3{
+                background: blue;
+            }
+            .col4{
+                background: yellow;
+            }
+
+            /* css ipad */
+            @media(min-width: 768px) and (max-width: 1023px){
+                /* Ipad hiển thị 2 hàng, mỗi hàng 2 cột bằng nhau */
+                .row{
+             /* Bỏ đi tính chất mặc địnhc ủa flex, néu width trên 100% thì xuống hàng dưới */
+                    flex-wrap: wrap;
+                }
+                .col1,.col2,.col3,.col4{width: 50%;}
+            }
+
+            /* css mobile */
+            @media(max-width: 767px){
+                .row{ flex-wrap: wrap;}
+                .col1,.col2,.col3,.col4{width: 100%;}
+            }
+    </style>
+    <div class="row">
+        <div class="col1">Div1</div>
+        <div class="col2">Div2</div>
+        <div class="col3">Div3</div>
+        <div class="col4">Div4</div>
+    </div>
+    <h1>Pc màu đỏ, Ipad màu vàng, Mobile màu xanh</h1>
+    <h3>Pc mà nền xanh, Ipad nền đỏ, Mobile nền vàng</h3>
+</body>
+</html>

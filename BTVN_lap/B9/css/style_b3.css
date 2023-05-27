@@ -1,0 +1,103 @@
+/* style_b3.css */
+@font-face{
+    font-family: Inconsolata ;
+    src: url(../fonts/Inconsolata.ttf);
+}
+@font-face{
+    font-family: PlayfairDisplay;
+    src: url(../fonts/PlayfairDisplay.ttf);
+}
+@font-face{
+    font-family: Ubuntu;
+    src: url(../fonts/Ubuntu-Light.ttf);
+}
+.background{
+    width: 80%;
+    margin: auto;
+}
+.row{
+    display: flex;
+}
+.title{
+    width: 40%;
+    font-size: 30px;
+    font-family: Inconsolata;
+    padding-left: 70px;
+}
+.menuu{
+    margin-top: 38px;
+}
+.menu{
+    flex: 1;
+    margin-left: 70px;
+    margin-bottom: 70px;
+    width: 60%;
+    font-family: PlayfairDisplay;
+    text-decoration: none;
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.824);
+    text-align: center;
+}
+.width{
+    width: 60%;
+    margin: auto;
+    padding-bottom: 50px;
+}
+.title-para{
+    font-family: Ubuntu;
+    /* padding-top: 50px; */
+    color: rgba(0, 0, 0, 0.533);
+    font-size: 15px;
+}
+.dep-para{
+    font-family: PlayfairDisplay;
+    font-size: 30px;
+    color: rgba(0, 0, 0, 0.772);
+}
+.para{
+    text-align: justify;
+}
+.comment{
+    padding-top: 20px;
+    padding-bottom: 25px;
+    font-family: Ubuntu;
+    color: rgba(0, 0, 0, 0.533);
+    font-size: 15px;
+}
+.images{
+    display: flex;
+    margin: auto;
+    width: 60%;
+}
+.padding-img{
+    margin-right: 20px;
+}
+.sign{
+    background-color: rgb(240, 240, 240);
+    width: 100%;
+    margin: auto;
+    /* border: 1px solid; */
+    text-align: center;
+    height: 200px;
+}
+.sign-up{
+    margin-top: 100px;
+    font-family: PlayfairDisplay;
+    padding-top: 50px;
+    font-size: 30px;
+}
+.email{
+    border: none;
+    background-color: rgb(240, 240, 240);
+    border-bottom: 1px solid;
+    width: 300px;
+}
+.load-more{
+    margin-top: 20px;
+    border: 1px solid;
+    font-family: PlayfairDisplay;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.772);
+}

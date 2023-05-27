@@ -1,0 +1,118 @@
+/* style_b2.css */
+
+.bg-top{
+    background-color: rgb(214, 230, 231);
+    width: 100%;
+    height: 70px;
+}
+.bg-middle{
+    background-color: rgb(93, 70, 56);
+    width: 100%;
+    height: 150px;
+}
+.bg-bottom{
+    background-color: rgb(177, 163, 141);
+    width: 100%;
+    height: 121vh;
+}
+.title{
+    width: 64%;
+    margin: auto;
+    padding-left: 30px;
+    padding-top: 20px;
+    color: rgb(13, 45, 105);
+    font-weight: bold;
+    font-size: large;
+}
+.content{
+    background-color: rgb(254, 250, 232);
+    width: 64%;
+    margin: auto;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    /* padding-top: ; */
+    position: inherit;
+}
+.bg-content{
+    padding-top: 40px;
+}
+.row{
+    display: flex;
+}
+.menu{
+    flex: 1;
+    background-color: rgb(136, 172, 58);
+    height: 40px;
+    margin-top: 0%;
+    text-align: center;
+    margin-left: 1px;
+    display: inline-block;
+    padding-top: 15px;
+}
+.menu:first-child{
+    background-color: rgb(254, 250, 232) ;
+    color: black;
+}
+.image{
+    display: block;
+    margin: auto;
+}
+.hr{
+    width: 95%;
+}
+.Thanks{
+    display: flex;
+}
+.thank{
+    padding-left: 50px;
+    width: 80%;
+}
+.Quote{
+    background-color: rgb(212, 144, 37);
+    border: 1px solid rgb(212, 144, 37);
+    padding: 5px;
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+}
+.Contact{
+    display: flex;
+}
+.h1{
+    color: rgb(123, 157, 51);
+    font-size: 30px;
+}
+.About-me{
+    width: 50%;
+    padding-left: 20px;
+    padding-right: 40px;
+    text-align: justify;
+}
+.help{
+    width: 50%;
+    padding-right: 40px;
+    text-align: justify;
+}
+.mo-ta{
+    color: rgb(207, 139, 31);
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.footer{
+    width: 64%;
+    margin: auto;
+}
+.footer-content{
+   color: rgba(37, 16, 16, 0.811); 
+   text-decoration: none;
+   font-weight: bold;
+   padding-right: 5px;
+   padding-left: 5px;
+   
+   border-right: 1px solid rgba(37, 16, 16, 0.811) ;
+
+}
+.footer-content:first-child{
+    padding-left: 20px;
+}

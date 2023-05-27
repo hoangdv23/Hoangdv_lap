@@ -1,0 +1,31 @@
+note.txt
+- Cắt giao diện từ file thiết kế Photoshop
++ Chuyển đổi gile thiết kế sang trang html
++ Cần chuyển đổi: ảnh, font chữ, màu sắc.
++ Khoảng cách thì chỉ cần chuyển đổi tương đối
++ cần code giao diên để càng giống file thiét kế càng tốt
+
+- Demo
++ Mở Bai_tap_ve_nhabt1.psd bằng Photoshop
++ Các bước cát giao diện:
+B1: Tạo cấi trúc thư mục để lưu thông tin từ fie PSD
+psd_demo/
+        /image : lưu ảnh từ file thiết kế
+        /fonts : lưu font chữ từ file thiết kế
+        /css/
+            /style.css : file CSS chính
+        /js: lưu file .js
+        index.html: file HTML chính
+B2: Cắt ảnh từ file PSD:
+Một số thao tác cơ bản
+Zoom to nhỏ: Alt + Chuột giữa
+Di chuyển tới vùng muốn xem: Chọn công cụ Move (V) sau đó giữ phím cách và di chuyển
+- Ảnh là gì? là không thể dùng HTML CSS để tạo ra
+Nhược điểm là khi cắt ảnh là ko có tính linh hoạt, ưu điểm thì dễ
+- Cắt ảnh sử dụng Crop (C)
++ B3: Lấy các font từ file thiết kế
+sử dụng công cụ Text (T)
+Myrad Pro
+Pacifio 
+tải trên mạng về r ném vào folder fonts
++B4: Code HTML CSS
