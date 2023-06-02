@@ -1,0 +1,106 @@
+<!-- index_js.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập về nhà buổi 11</title>
+</head>
+<body>
+    <!-- Bài 1 -->
+    <style>
+        .div{
+            
+            width: 80%;
+            margin: auto;
+        }
+        .form-input{
+            padding-left: 40px;
+            margin-left: 40px;
+            margin-bottom: 10px;
+            border: 1px solid blue;
+            border-radius: 2px;
+        }
+        .form-input:nth-child(5){
+            margin-left: 70px;
+        }
+        #addContact{
+            border: 1px solid blue;
+            border-radius: 3px;
+            box-shadow: 1px black;
+        }
+    </style>
+    <div class="div">
+        <h1>Contact Manager</h1>
+        <form action="" id="form-info">
+            First Name
+            <input type="text" name="" class="form-input" id="firstName"> <br>
+            Last Name
+            <input type="text" name="" class="form-input" id="lastName"> <br>
+            Email
+            <input type="text" name="" class="form-input" id="email"> <br>
+            Telephone
+            <input type="text" name="" class="form-input" id="telephone"><br>
+            <input type="submit" name="" id="addContact" value="Add Contact">
+        </form>
+        <h3 id="error" style="color: red;"></h3>
+        <h3 id="result" style="color: green;"></h3>
+
+    <script>
+        var obj_form = document.querySelector('#form-info');
+        obj_form.addEventListener('submit',function(){
+            // Khai báo biến lỗi
+            var error = '';
+            var result = '';
+            //Lấy First Name
+            var obj_firstName = document.querySelector('#firstName');
+            var firstName = obj_firstName.value;
+            //Lấy last Name
+            var obj_lastName = document.querySelector('#lastName');
+            var lastName = obj_lastName.value;
+            // Lấy email
+            var obj_email = document.querySelector('#email');
+            var email = obj_email.value;
+            // lấy sđt
+            var obj_telephone = document.querySelector('#telephone');
+            var telephone = obj_telephone.value;
+
+            // Lọc giá trị tên khi điền form
+            if(firstName == ''|| lastName == ''){
+                error = 'Phải nhập đầy đủ tên';
+                obj_firstName.focus();
+                obj_lastName.focus();
+            }else if (firstName.length < 3 || lastName.length < 3){
+                error = 'Tên phải dài từ 3 ký tự trở lên';
+                obj_firstName.focus();
+                obj_lastName.focus();
+            }else if(isNaN(telephone) == true){
+                error = 'Điện thoại phải là số';
+                obj_telephone.focus();
+            }
+            else if(email.indexOf("@") == -1){
+                error = 'Email phải có @';
+                obj_email.focus();
+            }
+            // đầu ra
+            if( error == ''){
+                result += "Tên của bạn: " +firstName +lastName;
+                result += '<br>';
+                result += "Email của bạn: " + email;
+                result += '<br>';
+                result += "Số điện thoại cúa bạn: " +telephone;
+            }
+            var obj_error = document.querySelector('#error');
+            obj_error.innerHTML = error; // inner Text
+            // + Đổ result:
+            var obj_result = document.querySelector('#result')
+            obj_result.innerHTML = result;
+            event.preventDefault();
+        })
+    </script>
+    </div>
+
+    
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!-- process_form.html 
+Quy trình xử lý form với javascript
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xử lý form JS</title>
+</head>
+<body>
+    <form action="" id="form-info">
+        Nhập họ tên:
+            <input type="text" id="fullname">
+            <br>
+        Nhập tuổi:
+            <input type="text" name="" id="age">
+            <br>
+        Giới tính:
+            <input type="radio" name="gender" id="" value="0">Nam
+            <input type="radio" name="gender" id="" value="1">Nữ
+            <br>
+        <input type="submit" name="" id="" value="show info">
+    </form>
+    <!-- Thẻ chờ -->
+    <h3 id="error" style="color: red;"></h3>
+    <h3 id="result" style="color: green;"></h3>
+    <script>
+        // - B1: Lấy obj đối tượng
+        var obj_form = document.querySelector('#form-info');
+        // - B2: Gán sự kiện submit cho obj form ( chỉ áp dụng với thẻ form)
+        obj_form.addEventListener('submit', function(){
+            // Quy trình xử lý form:
+            // B1: khai báo 2 biến lưu lỗi và kết quả sẽ hiển thị
+            var error = '';
+            var result = '';
+
+
+            // B2: Lấy obj và lấy ra giá trị các input trong form
+            // Lấy full name
+            var obj_fullname = document. querySelector('#fullname');
+            var fullname = obj_fullname.value;
+            // alert(fullname);
+            // Lấy tuổi
+            var obj_age = document.querySelector('#age');
+            var age = obj_age.value;
+            // alert(age);
+
+
+            // B3: Validate form- kiểm tra tính hợp lệ
+            // Lọc dữ liệu đầu vào để tránh dữ liệu rác và giúp bảo mật form
+            // Tên và tuổi phải nhập: so sánh với chuỗi rỗng
+            // Tên phải ít nhất 3 kí tự: .length
+            // Tuổi phải là số: isNaN = is not a number
+            // Nếu có lỗi thì gán cho biến error
+            if(fullname == '' || age == ''){
+                error = 'Tên và tuổi phải nhập';
+                obj_fullname.focus(); //focus vào input
+            }else if(fullname.length <= 3){
+                error = 'Tên phải trên 3 kí tự';
+                obj_fullname.focus(); //focus vào input
+            } else if(isNaN(age) == true){
+                error = 'Tuổi phải là số';
+                obj_fullname.focus(); //focus vào input
+            }
+            // B4: Xử lý logic chính ( Hiển thị dữ liệu)
+            // Chỉ khi hệ thống không có lỗi nào xảy ra.
+            if ( error == ''){
+                result += "Tên của bạn: " +fullname;
+                result += '<br>';
+                result += "Tuổi của bạn" +age;
+            }
+            //B5: Hiển thị error và result ra màn hình:
+            //Cần chuânt bị HTML để đổ 2 biến ra
+            // + Đổ error:
+            var obj_error = document.querySelector('#error');
+            obj_error.innerHTML = error; // inner Text
+            // + Đổ result:
+            var obj_result = document.querySelector('#result')
+            obj_result.innerHTML = result;
+
+            // Hiện tại đang bị tình trạng hiển thị xong mất?
+            //  Do hành vi mặc định của submit của sự kiện submit là tải lại trang
+            // Cần ngăn hành vi mặc định này để giữ lại được hiển thị
+            //even là đối tượng chỉ có sẵn trong hàm callback
+            event.preventDefault();
+            // khi code JS càn phải cài lại trình duyệt để lưu lại log lỗi sau mỗi lần tải lại trang
+            // f12 -> console -> Icon setting
+        })
+    </script>
+</body>
+</html>

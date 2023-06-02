@@ -1,0 +1,100 @@
+<!-- index_js2.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTVN bài 1 buổi 11</title>
+</head>
+<body>
+    <!-- Bài 2 -->
+    <div>
+        <h1>Sping MVC form Demo- Registration</h1>
+        <form action="" id="form-info">
+            User Name:
+            <input type="text" name="" id="userName">
+            <br>
+            Password:
+            <input type="text" name="" id="password">
+            <br>
+            E-mail:
+            <input type="text" name="" id="email">
+            <br>
+            Birthday (mm/dd/yyyy):
+            <input type="text" name="" id="birthday">
+            <br>
+            Profession:
+            <select name="" id="profession">
+                <option value="">Developer</option>
+                <option value="">Saler</option>
+                <option value="">Accountant</option>
+                <option value="">Manager</option>
+            </select>
+            <br>
+            <input type="submit" name="" id="" value="Register">
+        </form>
+
+            <!-- Thẻ chờ -->
+        <h3 id="error" style="color: red;"></h3>
+        <h3 id="result" style="color: green;"></h3>
+
+        <script>
+            var obj_form = document.querySelector('#form-info');
+            obj_form.addEventListener('submit', function(){
+                var error = '';
+                var result = '';
+
+                //Lấy username
+                var obj_username = document.querySelector('#userName');
+                var username = obj_username.value;
+                //Lấy password
+                var obj_password = document.querySelector('#password');
+                var password = obj_password.value;
+                //Lấy email
+                var obj_email = document.querySelector('#email');
+                var email = obj_email.value;
+                //Lấy birthday
+                var obj_birthday = document.querySelector('#birthday');
+                var birthday = obj_birthday.value;
+                //Lấy selector
+                var obj_profession = document.querySelector('#progession');
+                var profession = obj_profession.value;
+
+                //Lọc giá trị điền
+                if(username == '' || password == ''){
+                    error = 'Phải nhập username và password';
+                    obj_fullname.focus(); //focus vào input
+                }else if(username.length <= 3){
+                    error = 'Username phải trên 3 kí tự';
+                    obj_fullname.focus(); //focus vào input
+                } else if( password.length <= 8){
+                    error = 'Password phải trên 8 kí tự';
+                    obj_password.focus();
+                }
+                // hiển thị dữ liệu
+                if( error == ''){
+                    result += "Username của bạn là: " +username;
+                    result +='<br>';
+                    result += "Password cúa bạn là: " +password;
+                    result +='<br>';
+                    result += "Email của bạn là: " +email;
+                    result +='<br>';
+                    result += "Sinh nhật của bạn là: " +birthday;
+                    result +='<br>';
+                    result += "Linh vực chuyên gia của bạn là: " +profession;
+                }
+
+                // + Đổ error:
+                var obj_error = document.querySelector('#error');
+                obj_error.innerHTML = error; // inner Text
+                // + Đổ result:
+                var obj_result = document.querySelector('#result')
+                obj_result.innerHTML = result;
+                event.preventDefault();
+            })
+        </script>
+    </div>
+
+</body>
+</html>
